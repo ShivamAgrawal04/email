@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export const sendMail = async (email, trackerId) => {
-  const trackingUrl = `${process.env.BASE_URL}/api/track-mail${trackerId}`;
+  const trackingUrl = `${process.env.BASE_URL}/api/track-mail/${trackerId}`;
   const mailOptions = {
     from: `Dead Pixel Check ${process.env.GMAIL_USER}`,
     to: email,

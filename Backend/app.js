@@ -16,8 +16,7 @@ app.use("/api", mailRouter);
 const port = process.env.PORT;
 if (!port) throw new Error("Port must be specified");
 
-app.listen(3004, () => {
+app.listen(port, () => {
   connectDB();
-
-  console.log("Server is running on port 3004");
+  console.log("Server is running on port", port);
 });

@@ -11,6 +11,9 @@ app.use(express.json());
 // const __dirname = path.dirname(__filename);
 // app.use(express.static(path.join(__dirname, "public")));
 
+app.use("/",(req,res)=>{
+  res.send("Welcome to Shortner URL");
+});
 app.use("/api", mailRouter);
 
 const port = process.env.PORT;
